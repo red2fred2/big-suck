@@ -1,4 +1,15 @@
-html, body {
-  margin: 0;
+@import "settings";
+
+html {
   display: block;
+}
+
+body {
+  margin:0;
+  padding-top: 1em;
+  background-color: $b-color
+}
+
+.center {
+  text-align: center;
 }

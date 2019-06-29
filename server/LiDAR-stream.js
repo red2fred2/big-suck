@@ -38,6 +38,8 @@ Stream.stdout.on('data', data => {
     onScan(scan, jsonString)
     LiDAR.scans.push(scan)
 
+    if(LiDAR.scans.length > 70) LiDAR.scans.shift()
+
     //cut out used jsonString from runningChunk
     runningChunk = runningChunk.substring(index+delLength)
     index = runningChunk.indexOf('DELIMETER')

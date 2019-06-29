@@ -18,15 +18,26 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+var maxRs = [];
+
 function renderMap(scan) {
   var i = 0;
-  var points = scan.points.map(function (point) {
+  var maxR = scan.points.reduce(function (a, c) {
+    return Math.max(a, c.range);
+  }, 0);
+  maxRs.push(maxR);
+  var avgR = maxRs.reduce(function (a, c) {
+    return a + c;
+  }) / maxRs.length,
+      points = scan.points.map(function (point) {
     return React.createElement(Point, {
       x: point.x,
       y: point.y,
+      pMult: 50 / avgR,
       key: i++
     });
   });
+  if (maxRs.length > 70) maxRs.shift();
   ReactDOM.render(points, document.getElementById('map'));
 }
 
@@ -44,13 +55,13 @@ function (_React$Component) {
   _createClass(Point, [{
     key: "render",
     value: function render() {
-      var x = 50 + this.props.x * 10,
-          y = 50 - this.props.y * 10;
+      var x = 50 + this.props.x * this.props.pMult,
+          y = 50 - this.props.y * this.props.pMult;
       return React.createElement("ellipse", {
         cx: x + '%',
         cy: y + '%',
-        rx: ".3%",
-        ry: ".3%"
+        rx: ".4%",
+        ry: ".4%"
       });
     }
   }]);

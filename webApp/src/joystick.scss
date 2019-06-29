@@ -1,8 +1,8 @@
 @import "settings";
 
-svg#map {
-  background-color: $b-light-color;
-  border-radius: 0.2em;
+svg#joystick {
+  background-color: $b-color;
+  border-radius: 50%;
   box-shadow: 0 0.3em 0.5em rgba(0,0,0,0.16), 0 0.2em 0.5em rgba(0,0,0,0.23);
 
   ellipse {

@@ -1,0 +1,31 @@
+{
+  "name": "big-suck",
+  "version": "1.0.0",
+  "description": "Vacuum do the big suck.",
+  "main": "server/index.js",
+  "scripts": {
+    "run": "cd server; node index"
+  },
+  "author": "Dylan Polson",
+  "license": "MPL 2.0",
+  "keywords": [
+    "robot",
+    "sensor",
+    "websocket"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/red2fred2/big-suck.git"
+  },
+  "dependencies": {
+    "websocket": "^1.0.28"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  }
+}

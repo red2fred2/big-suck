@@ -38,6 +38,7 @@ Stream.stdout.on('data', data => {
     onScan(scan, jsonString)
     LiDAR.scans.push(scan)
 
+    //max of 70 scans
     if(LiDAR.scans.length > 70) LiDAR.scans.shift()
 
     //cut out used jsonString from runningChunk

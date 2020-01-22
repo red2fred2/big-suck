@@ -1,0 +1,3 @@
+[submodule "server/cpp-src/ydlidar_sdk"]
+	path = server/cpp-src/ydlidar_sdk
+	url = https://github.com/yangfuyuan/ydlidar_sdk

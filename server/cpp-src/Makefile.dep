@@ -1,8 +1,0 @@
-main.o: main.cpp ydlidar_sdk/Lidar/LIDARDevice.h \
- ydlidar_sdk/Lidar/LIDARDriverInterface.h ydlidar_sdk/Lidar/../Utils.h \
- ydlidar_sdk/Lidar/Drivers/YDLidar/ydlidar_driver.h \
- ydlidar_sdk/Lidar/Drivers/YDLidar/../../../Lidar/DeviceException.h \
- ydlidar_sdk/Lidar/Drivers/YDLidar/../../../Serial/serial.h \
- ydlidar_sdk/Lidar/Drivers/YDLidar/locker.h \
- ydlidar_sdk/Lidar/Drivers/YDLidar/thread.h \
- ydlidar_sdk/Lidar/Drivers/YDLidar/timer.h

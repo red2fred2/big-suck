@@ -1,8 +1,7 @@
 const gulp = require('gulp'),
       babel = require('gulp-babel'),
       sass = require('gulp-sass')
-
-sass.compiler = require('node-sass');
+      sass.compiler = require('node-sass');
 
 const compileJS = () =>
   gulp.src('webApp/src/*.js')
